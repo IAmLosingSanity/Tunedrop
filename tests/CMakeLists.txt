@@ -8,7 +8,15 @@ juce_add_console_app(TunedropTests
 target_sources(TunedropTests PRIVATE
     RunAllTests.cpp
     NoteUtilsTests.cpp
-    ${CMAKE_SOURCE_DIR}/src/dsp/NoteUtils.cpp)
+    YinPitchDetectorTests.cpp
+    MpmPitchDetectorTests.cpp
+    PitchDetectorFacadeTests.cpp
+    PitchSmootherTests.cpp
+    ${CMAKE_SOURCE_DIR}/src/dsp/NoteUtils.cpp
+    ${CMAKE_SOURCE_DIR}/src/dsp/YinPitchDetector.cpp
+    ${CMAKE_SOURCE_DIR}/src/dsp/MpmPitchDetector.cpp
+    ${CMAKE_SOURCE_DIR}/src/dsp/PitchDetector.cpp
+    ${CMAKE_SOURCE_DIR}/src/dsp/PitchSmoother.cpp)
 
 target_include_directories(TunedropTests PRIVATE
     ${CMAKE_SOURCE_DIR}/src)
